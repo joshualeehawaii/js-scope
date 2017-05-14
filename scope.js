@@ -5,36 +5,34 @@ function closeLid() {
   /* answer here */
   isCookieJarOpen = false;
 }
-
 function openLid() {
   /* answer here */
   isCookieJarOpen = true;
 }
 
-
 // Fill in the return value for the inner function to return a string, 'Hello World' using only the variables provided
 // in both inner and outer functions
+
 function outerFunction() {
   var hello = 'Hello';
 
   function innerFunction() {
     var world = 'World';
-    return /* answer here */;
+    return hello + ' ' + world;
   }
   return innerFunction();
 }
 
-
 // This is a function that takes in a 2d-array (or matrix) and returns the sum of all elements
 // It's broken due to count variables colliding into each other.  Fix it!
-function addMatrixElements(matrix) {
 
+function addMatrixElements(matrix) {
   var result = 0;
 
   for(var i = 0; i < matrix.length; i++) {
     /* fix counter variables in the second loop */
-    for(var i = 0; i < matrix[i].length; i++) {
-      result = result + matrix[i][i];
+    for(var j = 0; j < matrix[i].length; j++) {
+      result = result + matrix[i][j];
     }
   }
   return result;
